@@ -1,0 +1,25 @@
+<!-- Modal -->
+<div *ngFor="let videofolio of videofolios; let i = index">
+    <div class="modal fade modalproductos" id="{{videofolio.popup}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body modalserv fr-view">
+                    <div class="col-xs-12">
+                        <img src="{{videofolio.image}}" alt="">
+
+                    </div>
+                    <div class="col-xs-12">
+                        <h3>{{videofolio.title}}</h3>
+                        <p [innerHTML]="videofolio.technology | keepHtml"></p>
+                        <p [innerHTML]="videofolio.description | keepHtml"></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

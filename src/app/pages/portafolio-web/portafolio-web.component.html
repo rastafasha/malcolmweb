@@ -1,0 +1,33 @@
+<section class="hero lg vcenter dark">
+    <!-- Background-->
+    <div style="background-image: url(./assets/img/desarrolloweb.jpg);" class="bg parallax faded-subtle"></div>
+    <div class="container text-center">
+        <!-- Content-->
+        <h1 class="lg item">Diseño y Desarrollo Web</h1>
+
+    </div>
+</section>
+<section>
+    <div class="container">
+        <!-- Portfolio grid-->
+        <div class="grid ">
+            <div class="grid-sizer"></div>
+            <!-- Portfolio item-->
+            <div *ngFor="let webdesing of webdesings">
+                <a data-toggle="modal" [attr.data-target]="'#' + webdesing.popup">
+                    <div class="col-xs-6 col-sm-3 cuadro  cuadro3 " [ngStyle]="{'background-image': 'url(' + webdesing.image + ')'}">
+                        <div class="conten">
+                            <h3>{{webdesing.title}}</h3>
+                            <button class="btn">+ info</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="service-error " *ngIf="error ">
+                {{error}}
+            </div>
+        </div>
+
+    </div>
+</section>
+<app-modalweb></app-modalweb>

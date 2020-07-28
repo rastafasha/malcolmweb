@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/*Author: Malcolm Córdova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+.modalserv {}
+
+.modalserv h3 {
+    font-family: 'Lato', sans-serif !important;
+    text-transform: capitalize;
+}
+
+.modalserv p {
+    text-align: left;
+}
+
+.modalserv img {
+    width: auto;
+    float: left;
+    display: block;
+    margin-right: 10px;
+}
+
+.modalserv img {
+    width: 100%;
+    float: left;
+    display: block;
+    margin: auto;
+}
+
+.modal-header {
+    border-bottom: 1px solid transparent !important;
+}
+
+.modal-footer {
+    border-top: 1px solid transparent !important;
+}
+
+#ember-application heade .widget-bar,
+#ember-application header .widget-header,
+#ember-application body .widget-header,
+body .widget-bar {
+    position: relative;
+    background: #fff;
+    display: none !important;
+}
+
+.close {
+    font-size: 40px !important;
+    font-weight: 300 !important;
+}
+
+.modalproductos .modal-header {
+    height: 50px;
+}
+
+.modalproductos .modal-footer h3 {
+    border: 1px solid #9e7746;
+    border-radius: 4px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    float: none;
+    width: 40%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.modalproductos .close {
+    color: #333;
+    opacity: 1;
+    background: #fafafa;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.modalproductos ul {
+    padding-left: 20px;
+}
+
+.modal-body {
+    padding: 30px !important;
+}
+
+.botonmodal {
+    font-family: 'Lato', sans-serif !important;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 1;
+    border-radius: 4px;
+    padding: 10px 20px;
+    border-color: #9e7746;
+    font-size: 16px;
+    background: #9e7746;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1a3e69+0,437aab+49,476581+50,a2c0d2+100 */
+    background: rgb(26, 62, 105);
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(26, 62, 105, 1) 0%, rgba(67, 122, 171, 1) 49%, rgba(71, 101, 129, 1) 50%, rgba(162, 192, 210, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(26, 62, 105, 1) 0%, rgba(67, 122, 171, 1) 49%, rgba(71, 101, 129, 1) 50%, rgba(162, 192, 210, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(26, 62, 105, 1) 0%, rgba(67, 122, 171, 1) 49%, rgba(71, 101, 129, 1) 50%, rgba(162, 192, 210, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1a3e69', endColorstr='#a2c0d2', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+.botonmodal1 {
+    float: right;
+    position: relative;
+}
+
+.botonmodal:hover {
+    color: #fff;
+    opacity: 1;
+    border-color: #9e7746;
+    background: #9e7746;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1a3e69+0,437aab+49,476581+50,a2c0d2+100 */
+    background: rgb(26, 62, 105);
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(26, 62, 105, 1) 0%, rgba(67, 122, 171, 1) 49%, rgba(71, 101, 129, 1) 50%, rgba(162, 192, 210, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(26, 62, 105, 1) 0%, rgba(67, 122, 171, 1) 49%, rgba(71, 101, 129, 1) 50%, rgba(162, 192, 210, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(26, 62, 105, 1) 0%, rgba(67, 122, 171, 1) 49%, rgba(71, 101, 129, 1) 50%, rgba(162, 192, 210, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1a3e69', endColorstr='#a2c0d2', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+.modal-footer .boton {
+    width: 44%;
+    display: block !important;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.modal-backdrop {
+    z-index: 0 !important;
+}
+
+@media (max-width:780px) {
+    .modal-footer .boton {
+        width: 100%;
+    }
+    .modalproductos .modal-footer h3 {
+        width: 90%;
+        font-size: 24px;
+    }
+}

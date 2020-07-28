@@ -1,0 +1,24 @@
+<!-- Modal -->
+<div *ngFor="let grafico of graficos; let i = index">
+    <div class="modal fade modalproductos bd-example-modal-lg" id="{{grafico.popup}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body modalserv fr-view">
+                    <div class="col-xs-12 col-sm-8">
+                        <img src="{{grafico.image}}" alt="Malcolm Cordova Studio desing {{grafico.title}}">
+                        <div class="clear"></div><br><br>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <h3>{{grafico.title}}</h3>
+                        <p [innerHTML]="grafico.technology | keepHtml"></p>
+                        <p [innerHTML]="grafico.description | keepHtml"></p>
+                    </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+</div>

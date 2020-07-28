@@ -1,0 +1,34 @@
+<section class="hero lg vcenter dark">
+    <!-- Background-->
+    <div style="background-image: url(./assets/img/grf2.jpg);" class="bg parallax faded-subtle"></div>
+    <div class="container text-center">
+        <!-- Content-->
+        <h1 class="lg item">Diseño Gráfico</h1>
+
+    </div>
+</section>
+<section>
+    <div class="container">
+        <!-- Portfolio grid-->
+        <div class="grid ">
+            <div class="grid-sizer"></div>
+            <!-- Portfolio item-->
+            <div *ngFor="let grafico of graficos ">
+
+                <a data-toggle="modal" [attr.data-target]="'#' + grafico.popup">
+                    <div class="col-xs-6 col-sm-3 cuadro {{grafico.clasName}} cuadro3  fr-view" [ngStyle]="{'background-image': 'url(' + grafico.image + ')'}">
+                        <div class="conten">
+                            <h3>{{grafico.title}}</h3>
+                            <button class="btn">+ info</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="service-error" *ngIf="error">
+                {{error}}
+            </div>
+
+        </div>
+    </div>
+</section>
+<app-modalgrafico></app-modalgrafico>

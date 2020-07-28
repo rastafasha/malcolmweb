@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/*Author: Malcolm Córdova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+@import url("font-awesome.min.css");
+@import url("cuadrostexto.css");
+@import url("modal.css");
+.clear {
+    clear: both;
+    visibility: hidden;
+    margin: 0px;
+    padding: 0px;
+    height: 0;
+}
+
+header.affix {
+    height: 90px;
+    background: #fff;
+    left: 0;
+    right: 0;
+}
+
+header .brand {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+header.affix .brand,
+header.affix .menu {
+    margin-top: 5px;
+}
+
+.progress-bar.progress-bar-accent {
+    background: var(--azuloscuro);
+}
+
+.progress {
+    background-color: #a2c0d2;
+}
+
+:root {
+    --azuloscuro: #1a3e69;
+    --azulclaro: #a2c0d2;
+    --azulmedio: #5ab2ff;
+    var(--azulclaro);
+}
+
+footer {
+    background: var(--azulmedio);
+}
+
+a,
+a:hover {
+    color: #999;
+}
+
+.instagram--iframe .lightwidget-widget {
+    width: 100%;
+    height: auto;
+    height: 500px;
+    border: 0;
+    overflow: hidden;
+}
+
+@media(max-width:780px) {
+    .instagram--iframe .lightwidget-widget {
+        height: 200px;
+    }
+}
+
+
+/**/
+
+.wide {
+    width: 66.65%;
+}
+
+.wide:before {
+    padding-top: 37.6%;
+}
+
+.tall:before {
+    padding-top: 150%;
+}
+
+.large {
+    width: 66.65%;
+}
+
+.large:before {
+    padding-top: 75.00%;
+}
+
+.square:before {
+    padding-top: 100%;
+}
+
+.mouseicon {
+    width: 40px;
+    height: 60px;
+    border-radius: 16px;
+    border: 2px solid #fff;
+    position: absolute;
+    bottom: 100%;
+    top: auto;
+    left: 50%;
+    z-index: 99;
+}
+
+.mouseicon,
+.mouseicon:before {
+    position: absolute;
+    left: 50%
+}
+
+.mouseicon {
+    width: 40px;
+    height: 70px;
+    margin-left: -20px;
+    top: 80%;
+    margin-top: 0px;
+    box-shadow: inset 0 0 0 1px #333;
+    border-radius: 25px;
+}
+
+.mouseicon:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll;
+}
+
+#contenido {
+    padding-top: 50px;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(46px)
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .mouseicon {
+        display: none;
+    }
+}
+
+.videom {
+    width: 100%;
+    height: 350px;
+}

@@ -1,0 +1,24 @@
+<section class="hero lg vcenter dark">
+    <!-- Background-->
+    <div style="background-image: url(./assets/img/img3.jpg);" class="bg parallax faded-subtle"></div>
+    <div class="container text-center">
+        <!-- Content-->
+        <h1 class="lg item">Video</h1>
+
+    </div>
+</section>
+
+<section>
+    <div class="container item">
+        <div *ngFor="let videofolio of videofolios ">
+            <p class="col-xs-12 col-sm-6">
+                <iframe class="videom" [src]="getVideoIframe(videofolio.url)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; " allowfullscreen></iframe>
+            </p>
+
+        </div>
+        <div class="clear"></div><br><br>
+        <div class="text-center">
+            <pagination-controls id="video" autoHide="true" responsive="true" previousLabel="Anterior" nextLabel="Siguiente" (pageChange)="p = $event"></pagination-controls>
+        </div>
+    </div>
+</section>

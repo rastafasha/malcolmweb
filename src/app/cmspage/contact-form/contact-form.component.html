@@ -1,0 +1,93 @@
+<section class="hero lg vcenter dark">
+    <!-- Background-->
+    <div style="background-image: url(./assets/img/contacto.jpg);" class="bg parallax faded-subtle"></div>
+    <div class="container text-center">
+        <!-- Content-->
+        <h1 class="lg">Contacto</h1>
+    </div>
+</section>
+
+
+<section>
+    <div class="container">
+        <div class="page-desc" [hidden]="submitted">
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-sm-6">
+                    <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+                        <div class="form-group camp col-sm-6">
+                            <input type="text" name="name" id="name" [(ngModel)]="model.name" class="form-control" placeholder="Nombre" required #name="ngModel">
+                            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
+                                <div *ngIf="name?.errors.required">
+                                    El Nombre es requerido.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group camp col-sm-6">
+                            <input type="text" name="lastname" id="lastname" [(ngModel)]="model.lastname" class="form-control" placeholder="Apellido" required #lastname="ngModel">
+                            <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="error">
+                                <div *ngIf="lastname?.errors.required">
+                                    El Apellido es requerido.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group camp col-sm-6">
+                            <input type="text" name="email" id="email" [(ngModel)]="model.email" class="form-control" placeholder="E-Mail" required email #email="ngModel">
+                            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+                                <div *ngIf="email?.errors.required"> El Email es requerido.</div>
+                                <div *ngIf="email?.errors.email"> Debe introducir un email valido.</div>
+                            </div>
+                        </div>
+                        <div class="form-group camp col-sm-6">
+                            <input type="text" name="phone" id="phone" [(ngModel)]="model.phone" class="form-control" placeholder=" Teléfono">
+                        </div>
+                        <div class="form-group camp2 col-xs-12">
+                            <textarea name="message" id="message" [(ngModel)]="model.message" rows="5" class="form-control" placeholder=" Mensaje" required #message="ngModel"></textarea>
+                            <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error">
+                                <div *ngIf="message?.errors.required">El Mensaje es requerido.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button [disabled]="!contactForm.form.valid" class="btn botonmodal col-xs-12 col-md-4 col-md-offset-4"> Enviar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <h3>Envienos un Mensaje si tiene alguna pregunta o comentario.</h3>
+                    <p>Visítenos en:</p>
+                    <ul class="social">
+                        <li>
+                            <a href="https://www.facebook.com/malcolmcordovacom-348826256077/" target="_blank" class="fa fa-facebook"></a>
+
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/malcolmcordova/" target="_blank" class="fa fa-instagram"></a>
+
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/MalcolmCordova" target="_blank" class="fa fa-twitter"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/malcolm-cordova-5b5a9750/" target="_blank" class="fa fa-linkedin"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCjRqFIGgqhwD1Pl9zfop5DA?view_as=subscriber" target="_blank" class="fa fa-youtube-play"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="service-error" *ngIf="error">
+            <h3>{{error.errorTitle}}</h3>
+            <h4>{{error.errorDesc}}</h4>
+        </div>
+        <div [hidden]="!submitted" class="contact-message">
+            <div *ngIf="model.id" class="contact-success">
+                <h3 class="success"> Enviado!</h3>
+                <h4>El Mensaje ha sido enviado satisfactoriamente.</h4>
+                <br />
+                <!----button (click)="gotoHome()" class="btn btn-info"> ir al home</button-->
+            </div>
+        </div>
+    </div>
+</section>
+<div class="clear"></div><br><br>
